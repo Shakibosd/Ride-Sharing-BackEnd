@@ -1,0 +1,13 @@
+asgiref
+Django
+django-cors-headers
+django-environ
+django-filter
+djangorestframework
+Markdown
+pillow
+psycopg2-binary
+sqlparse
+typing_extensions
+tzdata
+whitenoise
