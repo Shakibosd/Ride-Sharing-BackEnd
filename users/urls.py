@@ -10,6 +10,8 @@ urlpatterns = [
     path('register/',views.RegisterAPIView.as_view(), name='register'),
     path('login/',views.LoginAPIView.as_view(), name='login'),
     path('logout/',views.LogoutAPIView.as_view(), name='logout'),
-    path('active/<uid64>/<token>/',views.activate, name='active')
+    path('active/<uid64>/<token>/',views.activate, name='active'),
+    # path('language-switch/', views.LanguageSwitchAPIView.as_view(), name='language_switch'),
+
 ]
 

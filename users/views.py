@@ -12,6 +12,7 @@ from rest_framework import status
 from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.authtoken.models import Token
+# from django.http import JsonResponse
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -85,4 +86,19 @@ class LogoutAPIView(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)    
 
 
+# class LanguageSwitchAPIView(APIView):
+#     def get(self, request):
+#         lang = request.GET.get('lang', 'en')  # Default language is English
 
+#         if lang == 'bn':
+#             response_data = {
+#                 'welcome': 'আমাদের ওয়েবসাইটে স্বাগতম!',
+#                 'description': 'এটি বাংলায় একটি উদাহরণ বর্ণনা।',
+#             }
+#         else:
+#             response_data = {
+#                 'welcome': 'Welcome to our website!',
+#                 'description': 'This is a sample description in English.',
+#             }
+
+#         return JsonResponse(response_data)
